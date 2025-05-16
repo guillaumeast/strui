@@ -35,5 +35,6 @@ jobs:
           files: |
             dist/linux-x86_64/strui-linux-x86_64.tar.gz
             dist/linux-x86_64/strui-linux-x86_64.sha256
+          generate_release_notes: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
