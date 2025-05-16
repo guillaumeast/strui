@@ -25,18 +25,25 @@ Tiny Unicode‑aware & ANSI‑aware **string CLI** – built on top of [`libstru
 
 ---
 
-## 🚀 Installation
+### 🚀 Quick install
 
 ```bash
-# clone + build
-git clone https://github.com/guillaumeast/strui.git
-cd strui
-make install           # clean + build + install to ~/.local/bin
+curl -fsSL https://raw.githubusercontent.com/guillaumeast/strui/master/install/install.sh | sh
 ```
 
-Makefile drops the binary in `~/.local/bin/strui` and warns if that path is not in `$PATH`.
+This will:
 
-> 🧼 Coming soon: install via `curl | sh` with auto‑compiled or prebuilt binary
+- detect your platform (Linux/macOS, x86_64/arm64),
+- download the right binary from the latest release,
+- install it to `~/.local/bin` (or a custom path if you set `$DEST`),
+- add `~/.local/bin` in your `$PATH` if not already in.
+- and verify checksum before running anything.
+
+> 🙈 If you're on `Windows`:  
+> Don’t worry — we all make mistakes.  
+> Fire up `wsl`, and pretend it never happened.  
+>   
+> ✨ Join us on the bright (terminal) side.
 
 ---
 

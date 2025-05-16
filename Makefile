@@ -10,7 +10,7 @@ BUILD_DIR	:= build
 
 SRC       	:= src/main.cpp
 TARGET		:= strui
-BIN       	:= $(BUILD_DIR)/$(TARGET)
+BIN       	?= $(BUILD_DIR)/$(TARGET)
 INSTALL_DIR := $(HOME)/.local/bin
 
 # ------------ RULES ----------------
