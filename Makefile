@@ -43,7 +43,7 @@ clean:
 	@echo "----------------"
 	@echo "🧹 \033[38;5;208mCleaning...\033[0m"
 	@echo "----------------"
-	[ -d $(BUILD_DIR) ] && rm -rf $(BUILD_DIR)
+	rm -rf $(BUILD_DIR)
 
 .PHONY: all test clean install
 
