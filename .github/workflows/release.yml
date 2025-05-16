@@ -11,7 +11,7 @@ jobs:
 
     strategy:
       matrix:
-        target: [linux-x86_64, linux-aarch64, windows-x86_64]
+        target: [linux-x86_64, linux-aarch64]
 
     steps:
       - name: Checkout repository
@@ -20,11 +20,11 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
+          # TODO: Re-enable Windows target when libunistring is cross-built
+          # sudo apt-get install -y gcc-mingw-w64-x86-64 g++-mingw-w64-x86-64
           sudo apt-get install -y g++ make libunistring-dev \
             gcc-aarch64-linux-gnu \
-            g++-aarch64-linux-gnu \
-            gcc-mingw-w64-x86-64 \
-            g++-mingw-w64-x86-64
+            g++-aarch64-linux-gnu
 
       - name: Resolve compiler for ${{ matrix.target }}
         id: compiler
